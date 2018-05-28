@@ -32,10 +32,7 @@ class Article extends Auth
 			if($result['err']!=0){
 				return $result;
             }
-            var_dump($data);
             $res = $AtricleLogic->add($data);
-            var_dump($res);
-            exit;
             if($res !== false){
 				return ["err"=>0,"msg"=>"添加文章完成","data"=>""];
 			}else{
