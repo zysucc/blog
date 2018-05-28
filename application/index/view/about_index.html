@@ -1,0 +1,33 @@
+{extend name="layout" /}
+{block name="banner"}
+<ol class="breadcrumb sider-margin">
+    <li><a href="{:url('Index/index')}">网站首页</a></li>
+    <li class="active">关于博客&nbsp;|&nbsp;关于我</li>
+</ol>
+{/block}
+{block name="left"}
+<div class="about-all">
+    <h4>关于我</h4><hr>
+    <div class="about">
+        <p><img class="image-light about-img thumbnail" src="/static/home/img/my.png"></p>
+        <p><strong>网名</strong>：简单的回忆</p>
+        <p><strong>说明</strong> ：2013年开始学习编程，想着电视里的黑客贼溜，无比向往，然而现实是残酷的，目前只是一个做做网站的菜鸟.......</p>
+        <p><strong>喜欢的话</strong>：小心哟，不要欺负我读书少，不认识周期表，我认真起来，连我自己都怕....</p>
+    </div>
+    <div class="about-love">
+        <h4>关于程序</h4><hr>
+        <p><strong>域名</strong>：www.myhttp.cn</p>
+        <p><strong>创建时间</strong>：{$systeminfo.sys_createtime}</p>
+        <p><strong>留言</strong> ：<a href="{$Think.config.auth.baiduurl}" target="_blank">邀你点评</a></p>
+        <p><strong>框架</strong> ：<a>{$Think.config.auth.framework}</a>
+        </p><p><strong>语言</strong> ：PHP+MYSQL[utf-8]</p>
+        <p><strong>声明</strong> ：非本站提供下载包造成任何损失,与本人无关！程序为开源,请自行修改.碰到问题请留言告诉我.</p>
+    </div>
+    <div class="about-version">
+        <h5>版本</h5>
+        {volist name="verlist" id="ver"}
+        <p><b style="width: 40px;display: block;float: left;margin-right: 10px;">{$ver.ver_bate}</b><small>{$ver.ver_addtime}</small>  {$ver.ver_text}</p>
+        {/volist}
+    </div>
+</div>
+{/block}
